@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Tracker Test page</title>
+</head>
+<body>
+    <h1>Event Tracker test page</h1>
+    <p>Open the console to check if is all good!</p>
+    <p>Copy/Paste the following test snippet, hit Enter </p>
+    <p>
+      <code>
+        var test = new tracker.Tracker({
+            api: '/staging',
+            host: 'http://apitesturl.com'
+        });
+      </code>
+    </p>
+    <p>
+      <code>
+        test.status();
+      </code>
+    </p>
+</body>
+</html>

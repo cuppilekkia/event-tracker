@@ -1,0 +1,5 @@
+dist/*
+demo/*
+coverage/*
+
+jest.config.js

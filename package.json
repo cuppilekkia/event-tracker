@@ -1,0 +1,58 @@
+{
+  "name": "@cuppilekkia/event-tracker",
+  "version": "1.2.10",
+  "description": "Event Tracker",
+  "main": "dist/tracker.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "lint": "npx eslint ./ --fix"
+  },
+  "keywords": [],
+  "author": "Antonio Coppola",
+  "license": "ISC",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "",
+    "@cuppilekkia:registry": ""
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.7.0",
+    "core-js": "^3.5.0",
+    "js-cookie": "^2.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@semantic-release/changelog": "^3.0.6",
+    "@semantic-release/commit-analyzer": "^6.3.3",
+    "@semantic-release/git": "^7.0.18",
+    "@semantic-release/release-notes-generator": "^7.3.5",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-loader": "^2.2.1",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-json": "^1.4.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.9.0",
+    "semantic-release": "^15.13.31",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
+  }
+}

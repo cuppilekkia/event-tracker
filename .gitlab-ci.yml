@@ -1,0 +1,53 @@
+# The release pipeline will run only if all jobs in the test pipeline are successful
+stages:
+    - test
+    - release
+    - deploy
+
+# Cache modules in between jobs
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+
+node:8:
+  image: node:8
+  stage: test
+  script:
+    - npm install
+    - npm test
+  artifacts:
+    paths:
+      - coverage/
+  only:
+    - master
+  except: 
+    - tags
+
+pages:
+  stage: deploy
+  dependencies:
+    - node:8
+  script:
+    - mkdir public
+    - mv coverage/lcov-report/ public/
+  artifacts:
+    paths:
+      - public
+    expire_in: 30 days
+  only:
+    - master
+  except: 
+    - tags
+
+publish:
+  image: node:8
+  stage: release
+  script:
+    - npm install
+    - npm run build
+    - npx semantic-release
+  only:
+    - master
+  except: 
+    - tags
