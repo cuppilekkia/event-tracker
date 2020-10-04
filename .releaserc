@@ -6,6 +6,11 @@
     ["@semantic-release/npm", {
       "npmPublish": true
     }],
+    ["@semantic-release/github", {
+      "assets": [
+        {"path": "dist/tracker.js", "label": "JS Tracker Dist"},
+      ]
+    }],
     ["@semantic-release/git", {
       "assets": ["package.json", "CHANGELOG.md"],
       "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"

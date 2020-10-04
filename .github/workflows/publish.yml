@@ -31,7 +31,8 @@ jobs:
       - run: yarn run build
       - run: npx semantic-release
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NPM_TOKEN: ${{secrets.npm_token}}
+          GH_TOKEN: ${{secrets.gh_token}}
 
   #publish-gpr:
   #  needs: build
