@@ -7,17 +7,17 @@ module.exports = {
     commonjs: true,
   },
   extends: [
-    'eslint:recommended', 
-    "airbnb-base",
+    'eslint:recommended',
+    'airbnb-base',
   ],
-  "plugins": [
-    "json"
+  plugins: [
+    'json',
   ],
   rules: {
     'no-console': 'off',
     'no-debugger': 'off',
   },
   parserOptions: {
-    parser: 'babel-eslint'
-  }
-}
+    parser: 'babel-eslint',
+  },
+};

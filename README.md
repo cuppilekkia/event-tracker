@@ -81,5 +81,6 @@ this package uses `semantic release` so please follow the sintax like:
 | `perf(pencil): remove graphiteWidth option`<br><br>`BREAKING CHANGE: The graphiteWidth option has been removed.`<br>`The default graphite width of 10mm is always used for performance reasons.` | ~~Major~~ Breaking Release |
 
 ## TODO
+- build a demo page with additionally a test node server
 - find a way to test cookie creation
 - fix coverage building and job to move into public
