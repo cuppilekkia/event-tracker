@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/cuppilekkia/event-tracker/compare/v1.0.0...v1.0.1) (2020-10-04)
+
+
+### Bug Fixes
+
+* **release:** removed gitlab file ([ebb58e7](https://github.com/cuppilekkia/event-tracker/commit/ebb58e76b842f0714164408796d55709330e2007))
+
 # 1.0.0 (2020-10-04)
 
 
