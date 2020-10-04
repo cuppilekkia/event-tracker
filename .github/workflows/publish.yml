@@ -4,8 +4,8 @@
 name: Node.js Package
 
 on:
-  release:
-    types: [created]
+  push:
+    branches: [ master ]
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 12
       - run: yarn --frozen-lockfile
-      - run: yarn build
+      - run: yarn test
 
   publish-npm:
     needs: build
@@ -28,6 +28,7 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: yarn --frozen-lockfile
+      - run: yarn run build
       - run: npx semantic-release
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
@@ -42,6 +43,7 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
       - run: yarn --frozen-lockfile
+      - run: yarn run build
       - run: npx semantic-release
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
