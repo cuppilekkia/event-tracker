@@ -21,10 +21,6 @@
   "files": [
     "dist"
   ],
-  "publishConfig": {
-    "access": "",
-    "@cuppilekkia:registry": ""
-  },
   "dependencies": {
     "@babel/polyfill": "^7.7.0",
     "core-js": "^3.5.0",
