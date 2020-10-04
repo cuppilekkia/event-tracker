@@ -1,6 +1,6 @@
 {
   "name": "@cuppilekkia/event-tracker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Browser interaction events Tracker",
   "main": "dist/tracker.js",
   "scripts": {
