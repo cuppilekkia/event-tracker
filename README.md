@@ -14,8 +14,6 @@ This package is built using webpack 4.
 
 Via npm
 
-Make sure to have in your root folder the `.npmrc` file with the settings to access the private NPM registry.
-
 ```bash
 $ npm install @cuppilekkia/event-tracker --save
 ```
